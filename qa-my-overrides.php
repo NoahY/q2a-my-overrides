@@ -1,7 +1,7 @@
 <?php
 		
-	function qa_sanitize_html() {
-		$safe = qa_sanitize_html_base();
+	function qa_sanitize_html($html, $linksnewwindow=false) {
+		$safe = qa_sanitize_html_base($html, $linksnewwindow);
 		$safe = preg_replace('/denied:dpr/','dpr:',$safe);
 		return $safe;
 	}
